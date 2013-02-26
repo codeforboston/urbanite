@@ -1,18 +1,10 @@
-# README for a newly created project.
+urbanite
+========
 
-There are a couple of things you should do first, before you can use all of Git's power:
+Urbanite: Boston is an app that allows users to access 'hidden' cultural gems in their local environment by leveraging social media streams from local venues and cultural organizations like bands, artists, authors, chefs, etc. It's based on the idea that most major media outlets don't necessarily know or report on what bands are playing at the Middle East or what movies are at the Brattle, but those places are promoting their lineups on their own Facebook and Twitter feeds. By aggregating those feeds by category and sub-category, we can let people explore cultural events in their neighborhoods. 
 
-  * Add a remote to this project: in the Cloud9 IDE command line, you can execute the following commands
-    `git remote add [remote name] [remote url (eg. 'git@github.com:/ajaxorg/node_chat')]` [Enter]
-  * Create new files inside your project
-  * Add them to to Git by executing the following command
-    `git add [file1, file2, file3, ...]` [Enter]
-  * Create a commit which can be pushed to the remote you just added
-    `git commit -m 'added new files'` [Enter]
-  * Push the commit the remote
-    `git push [remote name] master` [Enter]
+Originally written by the fuzzy-narwhal team at the Boston Civic Hack Day Challenge (Including Mark Chang, Rachael Stedman, Harlan Weber, Nick Hays, Chris Marstall, and others) the app was originally written in Rails and used a scraper to access the FB feeds of a curated list of culturemakers in Boston. In the future, we would like to explore on-site modes of use, mobile web or native mobile implementations, and a way for new venues and cultural groups to make their way on to the list without explicit moderation.
 
-That's it! If this doesn't work for you, please visit the excellent resources from [Github.com](http://help.github.com) and the [Pro Git](http://http://progit.org/book/) book.
-If you can't find your answers there, feel free to ask us via Twitter (@cloud9ide), [mailing list](groups.google.com/group/cloud9-ide) or IRC (#cloud9ide on freenode).
+Original repo can be found here https://github.com/fuzzy-narwhal
 
-Happy coding!
+CfA Collaboration Doc: https://docs.google.com/document/d/13J4-kye8bq-Cr-rbusUTN-sNSMfPnfD8jvCw0Zi3wm4/edit?usp=sharing
