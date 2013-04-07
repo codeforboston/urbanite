@@ -8,3 +8,36 @@ Originally written by the fuzzy-narwhal team at the Boston Civic Hack Day Challe
 Original repo can be found here https://github.com/fuzzy-narwhal
 
 CfA Collaboration Doc: https://docs.google.com/document/d/13J4-kye8bq-Cr-rbusUTN-sNSMfPnfD8jvCw0Zi3wm4/edit?usp=sharing
+
+
+Want to Collaborate?
+====================
+
+If you are interested in helping out here is how to get started:
+
+Windows:
+--------
+* Install Rails:
+	* Download installer and install: http://railsinstaller.org/
+* Running Mongodb:
+	* Download:  
+		* 32 Bit: http://downloads.mongodb.org/win32/mongodb-win32-i386-2.4.1.zip
+		* 64 Bit: http://downloads.mongodb.org/win32/mongodb-win32-x86_64-2.4.1.zip
+	* Running Mongodb Server:
+		* Open Command Prompt (CMD): Start->Run and write: `cmd`
+		* In CMD run the following command: `move C:\<path_to_mongo>\mongodb-win32-* C:\<path_to_mongo>\mongodb`
+		* Create the data directory: `mkdir C:\<path_to_where_you_want_to_put_your_data>\data\db`
+		* Start the server: `C:\<path_to_mongo>\mongodb\bin\mongod.exe --dbpath C:\<path_to_where_you_want_to_put_your_data>\data`
+		* Leave the CMD screen open, to close simply press Ctrl+c
+		* Official Mongo Instructions:  http://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/
+* Installing Github:
+	* Download installer and install: http://git-scm.com/downloads
+	* Run Git Bash and perform initial configuration:  https://help.github.com/articles/set-up-git#platform-windows
+	* Create a local copy of urbanite:
+		* In Git Bash run the following command: `git clone git://github.com/codeforboston/urbanite.git`
+* Create a Sites directory, in cmd: `mkdir C;\Sites`
+* In the Command Prompt with Ruby and Rails (Start->Search:Ruby) run the following command to install all dependencies: `bundle install`
+	* Now start the server: `rails server`
+* In the Github Urbanite Page go to the Issues section and grab and issue you want to try and tackle! Feel free to comment and ask for help on any issues, or create new issues if you notice anything wrong.
+
+		
