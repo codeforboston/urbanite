@@ -48,9 +48,7 @@ Mac OSX:
           how to install Ruby can be found
           [here](http://www.ruby-lang.org/en/downloads/)
 * Install Mongodb:
-        * The easiest way to install Mongodb is through
-          [homebrew](http://mxcl.github.io/homebrew/). Once brew is installed,
-          installing mongodb is as easy as: `brew install mongodb`
+	* The easiest way to install Mongodb is through [homebrew](http://mxcl.github.io/homebrew/). Once brew is installed, installing mongodb is as easy as: `brew install mongodb`
 	* Running Mongodb Server:
 		* After the install, brew will show some instructions on how to
                   run Mongodb; the easiest way is to just type `mongod` in a
@@ -69,6 +67,7 @@ Mac OSX:
 Troubleshooting:
 ----------------
 **Rails Server does not start up:**  Make sure mongodb is running
+
 **My Gemfile.lock is different from the one in the repo:** (Open to discussion). Advice is that Gemfile.lock should be in the repo
 (http://stackoverflow.com/questions/4151495/should-gemfile-lock-be-included-in-gitignore),
 but it seems that different platforms treat the gem differently, so your file
