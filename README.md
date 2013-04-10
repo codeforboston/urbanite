@@ -38,6 +38,43 @@ Windows:
 * Create a Sites directory, in cmd: `mkdir C;\Sites`
 * In the Command Prompt with Ruby and Rails (Start->Search:Ruby) run the following command to install all dependencies: `bundle install`
 	* Now start the server: `rails server`
-* In the Github Urbanite Page go to the Issues section and grab and issue you want to try and tackle! Feel free to comment and ask for help on any issues, or create new issues if you notice anything wrong.
 
-		
+Mac OSX:
+--------
+* Install Ruby:
+	* It would be a good idea to install Ruby through
+          [rvm](https://rvm.io/rvm/install/) but that is not necessary. rvm will
+          isntall Ruby 2.0.0 (at the time of this writing). More resources on
+          how to install Ruby can be found
+          [here](http://www.ruby-lang.org/en/downloads/)
+* Install Mongodb:
+        * The easiest way to install Mongodb is through
+          [homebrew](http://mxcl.github.io/homebrew/). Once brew is installed,
+          installing mongodb is as easy as: `brew install mongodb`
+	* Running Mongodb Server:
+		* After the install, brew will show some instructions on how to
+                  run Mongodb; the easiest way is to just type `mongod` in a
+                  terminal window.
+		* Optionally, you can create a data directory and start the
+                  server by using: `mongod --dbpath \<path_to_where_you_want_to_put_your_data>\data`
+		* Leave the terminal screen open, to close simply press Ctrl+c
+		* Official Mongo [Installation Instructions](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-os-x/)
+* Getting the sources:
+	* Create a Fork of the project, and clone it to your local mac 
+        * run `bundle install`
+	* Now start the server: `rails server`
+	* Navigate to http://localhost:3000 
+
+
+Troubleshooting:
+----------------
+**Rails Server does not start up:**  Make sure mongodb is running
+**My Gemfile.lock is different from the one in the repo:** (Open to discussion). Advice is that Gemfile.lock should be in the repo
+(http://stackoverflow.com/questions/4151495/should-gemfile-lock-be-included-in-gitignore),
+but it seems that different platforms treat the gem differently, so your file
+might differ from the one in the repository. Unless you have added something
+valuable to the Gem file itself, it's probably better not to commit this file?
+
+Working on the project:
+-----------------------
+* In the Github Urbanite Page go to the Issues section and grab and issue you want to try and tackle! Feel free to comment and ask for help on any issues, or create new issues if you notice anything wrong.
