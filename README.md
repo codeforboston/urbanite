@@ -13,7 +13,8 @@ CfA Collaboration Doc: https://docs.google.com/document/d/13J4-kye8bq-Cr-rbusUTN
 Want to Collaborate?
 ====================
 
-If you are interested in helping out here is how to get started:
+* We are using Trello (https://trello.com/b/aM5smhHf) for overall discussion of ideas and Github issues for specific things that need to be done. 
+* If you are interested in helping out here is how to get started:
 
 Windows:
 --------
