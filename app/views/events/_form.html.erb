@@ -13,7 +13,18 @@
 
   <div class="field">
     <%= f.label :event_name %><br />
-    <%= f.text_field :event_name %>
+    <%= f.text_field :event_name %><br />
+    <%= f.label :event_description %><br />
+	<%= f.text_field :event_categories %><br />
+	<%= f.label :event_categories %><br />
+	<%= f.text_field :event_description %><br />
+	<%= f.label :Schedule %><br />
+	<%= f.fields_for :schedule  do |builder| %>
+         <%= builder.label :Start_time %><br />
+         <%= builder.text_field :start_time %><br />
+		 <%= builder.label :End_time %><br />
+         <%= builder.text_field :end_time %><br />
+	<% end %>
   </div>
   <div class="actions">
     <%= f.submit %>
