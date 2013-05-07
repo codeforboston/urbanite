@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# Adding ruby 2 as a dependency for heroku
+ruby "2.0.0"
+
 gem 'rails', '3.2.12'
 
 source 'http://gemcutter.org'
