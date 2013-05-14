@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Urbanite by codeforboston</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/codeforboston/urbanite">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/codeforboston/urbanite/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/codeforboston/urbanite/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Urbanite</h1>
+          <p>Urbanite: Boston is an app that allows users to access 'hidden' cultural gems in their local environment by leveraging social media streams from local venues and cultural organizations like bands, artists, authors, chefs, etc. It's based on the idea that most major media outlets don't necessarily know or report on what bands are playing at the Middle East or what movies are at the Brattle, but those places are promoting their lineups on their own Facebook and Twitter feeds. By aggregating those feeds by category and sub-category, we can let people explore cultural events in their neighborhoods. </p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/codeforboston">codeforboston</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>urbanite</h1>
+
+<p>Urbanite: Boston is an app that allows users to access 'hidden' cultural gems in their local environment by leveraging social media streams from local venues and cultural organizations like bands, artists, authors, chefs, etc. It's based on the idea that most major media outlets don't necessarily know or report on what bands are playing at the Middle East or what movies are at the Brattle, but those places are promoting their lineups on their own Facebook and Twitter feeds. By aggregating those feeds by category and sub-category, we can let people explore cultural events in their neighborhoods. </p>
+
+<p>Originally written by the fuzzy-narwhal team at the Boston Civic Hack Day Challenge (Including Mark Chang, Rachael Stedman, Harlan Weber, Nick Hays, Chris Marstall, and others) the app was originally written in Rails and used a scraper to access the FB feeds of a curated list of culturemakers in Boston. In the future, we would like to explore on-site modes of use, mobile web or native mobile implementations, and a way for new venues and cultural groups to make their way on to the list without explicit moderation.</p>
+
+<p>Original repo can be found here <a href="https://github.com/fuzzy-narwhal">https://github.com/fuzzy-narwhal</a></p>
+
+<p>CfA Collaboration Doc: <a href="https://docs.google.com/document/d/13J4-kye8bq-Cr-rbusUTN-sNSMfPnfD8jvCw0Zi3wm4/edit?usp=sharing">https://docs.google.com/document/d/13J4-kye8bq-Cr-rbusUTN-sNSMfPnfD8jvCw0Zi3wm4/edit?usp=sharing</a></p>
+
+<h1>Want to Collaborate?</h1>
+
+<ul>
+<li>We are using Trello (<a href="https://trello.com/b/aM5smhHf">https://trello.com/b/aM5smhHf</a>) for overall discussion of ideas and Github issues for specific things that need to be done. </li>
+<li>If you are interested in helping out here is how to get started:</li>
+</ul><h2>Windows:</h2>
+
+<ul>
+<li>Install Rails:
+
+<ul>
+<li>Download installer and install: <a href="http://railsinstaller.org/">http://railsinstaller.org/</a>
+</li>
+</ul>
+</li>
+<li>Running Mongodb:
+
+<ul>
+<li>Download:<br><ul>
+<li>32 Bit: <a href="http://downloads.mongodb.org/win32/mongodb-win32-i386-2.4.1.zip">http://downloads.mongodb.org/win32/mongodb-win32-i386-2.4.1.zip</a>
+</li>
+<li>64 Bit: <a href="http://downloads.mongodb.org/win32/mongodb-win32-x86_64-2.4.1.zip">http://downloads.mongodb.org/win32/mongodb-win32-x86_64-2.4.1.zip</a>
+</li>
+</ul>
+</li>
+<li>Running Mongodb Server:
+
+<ul>
+<li>Open Command Prompt (CMD): Start-&gt;Run and write: <code>cmd</code>
+</li>
+<li>In CMD run the following command: <code>move C:\&lt;path_to_mongo&gt;\mongodb-win32-* C:\&lt;path_to_mongo&gt;\mongodb</code>
+</li>
+<li>Create the data directory: <code>mkdir C:\&lt;path_to_where_you_want_to_put_your_data&gt;\data\db</code>
+</li>
+<li>Start the server: <code>C:\&lt;path_to_mongo&gt;\mongodb\bin\mongod.exe --dbpath C:\&lt;path_to_where_you_want_to_put_your_data&gt;\data</code>
+</li>
+<li>Leave the CMD screen open, to close simply press Ctrl+c</li>
+<li>Official Mongo Instructions:  <a href="http://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/">http://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Installing Github:
+
+<ul>
+<li>Download installer and install: <a href="http://git-scm.com/downloads">http://git-scm.com/downloads</a>
+</li>
+<li>Run Git Bash and perform initial configuration:  <a href="https://help.github.com/articles/set-up-git#platform-windows">https://help.github.com/articles/set-up-git#platform-windows</a>
+</li>
+<li>Create a local copy of urbanite:
+
+<ul>
+<li>In Git Bash run the following command: <code>git clone git://github.com/codeforboston/urbanite.git</code>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Create a Sites directory, in cmd: <code>mkdir C;\Sites</code>
+</li>
+<li>In the Command Prompt with Ruby and Rails (Start-&gt;Search:Ruby) run the following command to install all dependencies: <code>bundle install</code>
+
+<ul>
+<li>Now start the server: <code>rails server</code>
+</li>
+</ul>
+</li>
+</ul><h2>Mac OSX:</h2>
+
+<ul>
+<li>Install Ruby:
+
+<ul>
+<li>It would be a good idea to install Ruby through
+  <a href="https://rvm.io/rvm/install/">rvm</a> but that is not necessary. rvm will
+  isntall Ruby 2.0.0 (at the time of this writing). More resources on
+  how to install Ruby can be found
+  <a href="http://www.ruby-lang.org/en/downloads/">here</a>
+</li>
+</ul>
+</li>
+<li>Install Mongodb:
+
+<ul>
+<li>The easiest way to install Mongodb is through <a href="http://mxcl.github.io/homebrew/">homebrew</a>. Once brew is installed, installing mongodb is as easy as: <code>brew install mongodb</code>
+</li>
+<li>Running Mongodb Server:
+
+<ul>
+<li>After the install, brew will show some instructions on how to
+      run Mongodb; the easiest way is to just type <code>mongod</code> in a
+      terminal window.</li>
+<li>Optionally, you can create a data directory and start the
+      server by using: <code>mongod --dbpath \&lt;path_to_where_you_want_to_put_your_data&gt;\data</code>
+</li>
+<li>Leave the terminal screen open, to close simply press Ctrl+c</li>
+<li>Official Mongo <a href="http://docs.mongodb.org/manual/tutorial/install-mongodb-on-os-x/">Installation Instructions</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Getting the sources:
+
+<ul>
+<li>Create a Fork of the project, and clone it to your local mac 
+
+<ul>
+<li>run <code>bundle install</code>
+</li>
+</ul>
+</li>
+<li>Now start the server: <code>rails server</code>
+</li>
+<li>Navigate to http://localhost:3000 </li>
+</ul>
+</li>
+</ul><h2>Troubleshooting:</h2>
+
+<p><strong>Rails Server does not start up:</strong>  Make sure mongodb is running</p>
+
+<p><strong>My Gemfile.lock is different from the one in the repo:</strong> (Open to discussion). Advice is that Gemfile.lock should be in the repo
+(<a href="http://stackoverflow.com/questions/4151495/should-gemfile-lock-be-included-in-gitignore">http://stackoverflow.com/questions/4151495/should-gemfile-lock-be-included-in-gitignore</a>),
+but it seems that different platforms treat the gem differently, so your file
+might differ from the one in the repository. Unless you have added something
+valuable to the Gem file itself, it's probably better not to commit this file?</p>
+
+<h2>Working on the project:</h2>
+
+<ul>
+<li>In the Github Urbanite Page go to the Issues section and grab and issue you want to try and tackle! Feel free to comment and ask for help on any issues, or create new issues if you notice anything wrong.</li>
+</ul>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
