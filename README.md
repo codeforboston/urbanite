@@ -62,8 +62,8 @@ Mac OSX:
 	* Create a Fork of the project, and clone it to your local mac 
         * run `bundle install`
 	* Now start the server: `rails server`
-  * Aside: Running Mongodb Server and WEBrick simulatenously
-    * Instead of running `mongod` in one terminal window and `rails server` in another, you can run `foreman start`. The [Foreman](https://github.com/ddollar/foreman) gem can run multiple processes at once, and is set up to run both Mongo and WEBrick at the same time, as defined in the `Procfile`.
+* Aside: Running Mongodb Server and WEBrick simulatenously
+  * Instead of running `mongod` in one terminal window and `rails server` in another, you can run `foreman start`. The [Foreman](https://github.com/ddollar/foreman) gem can run multiple processes at once, and is set up to run both Mongo and WEBrick at the same time, as defined in the `Procfile`.
 * Navigate to http://localhost:3000 
 
 
