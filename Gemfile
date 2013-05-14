@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.12'
+gem 'foreman', '0.63.0'
 
 source 'http://gemcutter.org'
 
