@@ -20,6 +20,9 @@ Urbanite::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
+  # precompile angular in production
+  config.assets.precompile += %w( angular/angular.min.js)
+
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
 

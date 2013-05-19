@@ -1,2 +1,11 @@
 <h1><%= @title %></h1>
 <p><%= @intro_mssg %></p>
+<div ng-controller="eventsCtrl"> 
+  <div id="event-list-container" >
+    <ul>
+      <li ng-repeat="event in events">
+        <h3>{{event.event_name}} <small>({{event.event_description}})</small></h3>
+      </li>
+    </ul>
+  </div>
+</div>
