@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 ruby "2.0.0"
 
 gem 'rails', '3.2.12'
+gem 'foreman', '0.63.0'
 
 source 'http://gemcutter.org'
 
@@ -23,7 +24,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+gem 'angular-rails-engine'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
