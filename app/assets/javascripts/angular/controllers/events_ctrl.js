@@ -6,14 +6,16 @@
 
 var events = angular.module('events', []);
 
-events.controller('EventsCtrl', function ($scope, $http) {
+var EventsCtrl = function ($scope, $http) {
   $http.get('events.json')
-    .success(function(data) {
+    .success(function (data) {
       $scope.events = data;
     });
-});
+}
+
+events.controller('EventsCtrl', EventsCtrl);
 
 
 //TODO (Jose) test that this works now that this is a module
 // Avoid minification of the injected dependencies by the assets pipeline
-events.$inject = ['$scope', '$http'];
+EventsCtrl.$inject = ['$scope', '$http'];
