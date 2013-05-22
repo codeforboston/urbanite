@@ -12,24 +12,31 @@ times = ["10:30 AM", "12:00 N", "2:30 PM", "5:00 PM", "6:00 PM",
 namespace :db do
   desc "Fill database with sample data"
   task populate: :environment do
-    Event.create!(event_name: "")
+
+    Event.create!(name: "First event",
+                  location: "First venue",
+                  description: "First description",
+                  categories: "First category",
+                  schedule: Schedule.new(start_time: Time.now, end_time: Time.now + 2.hours)
+      )
     
     40.times do |n|
-      act = acts.sample ; venue = venues.sample
-      event_name = "#{act} at #{venue}"
-      event_categories = categories.sample 2
-
+      act   = acts.sample
+      venue = venues.sample
+      categories = categories.sample 2
       start_time = times.sample
       end_time   = times[times.index(start_time) + 2] ; end_time ||= "12:00 PM"
 
-      event_description = "This week at #{venue}, come see #{act} in a
+      description = "This week at #{venue}, come see #{act} in a
       once-in-a-lifetime whirlwind performance. Doors at #{start_time}."
 
       schedule = Schedule.new(start_time: start_time, end_time: end_time)
-      Event.create!(event_name: event_name,
-                    event_description:  event_description,
-                    event_categories: event_categories,
-                    schedule: schedule)
+
+      Event.create!(name: act,
+                    location: venue,
+                    description: description,
+                    categories:  categories,
+                    schedule:    schedule)
     end
   end
 end
