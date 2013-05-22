@@ -15,3 +15,8 @@
 /tmp
 /config/database.yml
 /.c9revisions
+.sass-cache/
+
+.generators
+.rakeTasks
+urbanite.iml
