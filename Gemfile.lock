@@ -119,9 +119,9 @@ PLATFORMS
 DEPENDENCIES
   angular-rails-engine
   bson_ext
-  coffee-rails (~> 3.2.1)
+  coffee-rails (= 3.2.2)
   foreman (= 0.63.0)
-  mongoid (~> 3.0.0)
+  mongoid (= 3.0.23)
   rails (= 3.2.12)
-  sass-rails (~> 3.2.3)
+  sass-rails (= 3.2.6)
   uglifier (>= 1.0.3)
