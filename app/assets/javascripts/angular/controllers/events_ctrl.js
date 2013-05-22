@@ -1,9 +1,19 @@
-function EventsCtrl($scope, $http) {
+/**
+ * License goes here
+ */
+
+'use strict';
+
+var events = angular.module('events', []);
+
+events.controller('EventsCtrl', function ($scope, $http) {
   $http.get('events.json')
     .success(function(data) {
       $scope.events = data;
     });
-}
+});
 
+
+//TODO (Jose) test that this works now that this is a module
 // Avoid minification of the injected dependencies by the assets pipeline
-EventsCtrl.$inject = ['$scope', '$http'];
+events.$inject = ['$scope', '$http'];

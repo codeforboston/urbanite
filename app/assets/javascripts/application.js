@@ -12,4 +12,6 @@
 //
 //= require angular/angular
 //= require angular/angular-resource
+//= require ./angular_app
 //= require_tree ./angular
+
