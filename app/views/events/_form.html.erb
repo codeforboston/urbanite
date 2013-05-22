@@ -12,12 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :event_name %><br />
-    <%= f.text_field :event_name %><br />
-    <%= f.label :event_description %><br />
-    <%= f.text_field :event_description %><br />
-    <%= f.label :event_categories %><br />
-    <%= f.text_field :event_categories %><br />
+    <%= f.label :name %><br />
+    <%= f.text_field :name %><br />
+    <%= f.label :description %><br />
+    <%= f.text_field :description %><br />
+    <%= f.label :categories %><br />
+    <%= f.text_field :categories %><br />
     <%= f.label :Schedule %><br />
     <%= f.fields_for :schedule  do |builder| %>
       <%= builder.label :Start_time %><br />

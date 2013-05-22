@@ -64,7 +64,15 @@ Mac OSX:
 	* Now start the server: `rails server`
 * Aside: Running Mongodb Server and WEBrick simulatenously
   * Instead of running `mongod` in one terminal window and `rails server` in another, you can run `foreman start`. The [Foreman](https://github.com/ddollar/foreman) gem can run multiple processes at once, and is set up to run both Mongo and WEBrick at the same time, as defined in the `Procfile`.
-* Navigate to http://localhost:3000 
+* Navigate to http://localhost:3000
+
+
+Database Tasks:
+---------------
+* Several rake tasks are included for seeding the database. They are located in `lib/tasks`. (NOTE: Mongo must be running for the rake tasks to work.)
+  * `rake db:populate` fills the database with sample events.
+  * `rake db:reset` drops and migrates the database. (This function comes with ActiveRecord; I'm not sure why it doesn't with Mongoid.)
+  * `rake db:rp` resets the database, then populates it with sample events.
 
 
 Troubleshooting:
@@ -76,6 +84,8 @@ Troubleshooting:
 but it seems that different platforms treat the gem differently, so your file
 might differ from the one in the repository. Unless you have added something
 valuable to the Gem file itself, it's probably better not to commit this file?
+
+**
 
 Working on the project:
 -----------------------

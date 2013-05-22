@@ -1,21 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Event name:</b>
-  <%= @event.event_name %><br />
-  <b>Event description:</b>
-  <%= @event.event_description %><br />
-  <b>Event categories:</b>
-  <%= @event.event_categories %><br />
-  <p>
-	<b>Schedule:</b><br />
-	<b>Start Time:</b>
-	<%= @event.schedule.start_time %><br />
-	<b>End Time:</b>
-	<%= @event.schedule.end_time %><br />
-  </p>
-</p>
+<h2>Event: <%= @event.name %></li></h2>
 
+<ul>
+  <li>Description: <%= @event.description %></li>
+  <li>Categories: <%= @event.categories %></li>
+	<li>Schedule:</li>
+	<ul>
+    <li>Start Time:	<%= @event.schedule.start_time %></li>
+	  <li>End Time:	<%= @event.schedule.end_time %></li>
+  </ul>
+</ul>
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>
