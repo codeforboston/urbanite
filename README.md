@@ -66,6 +66,11 @@ Mac OSX:
   * Instead of running `mongod` in one terminal window and `rails server` in another, you can run `foreman start`. The [Foreman](https://github.com/ddollar/foreman) gem can run multiple processes at once, and is set up to run both Mongo and WEBrick at the same time, as defined in the `Procfile`.
 * Navigate to http://localhost:3000 
 
+Database Tasks:
+---------------
+Run `rake db:populate` to fill the database with sample data.
+Run `rake db:purge` to empty all records from the database.
+(NOTE: If you're getting errors, double-check that `mongod` is running.)
 
 Troubleshooting:
 ----------------
