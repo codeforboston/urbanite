@@ -20,3 +20,5 @@
 .generators
 .rakeTasks
 urbanite.iml
+
+.DS_Store
