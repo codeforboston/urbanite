@@ -14,20 +14,20 @@ namespace :db do
   task populate: :environment do
 
     Event.create!(name: "First event",
-                  locations: "First venue",
+                  locations: ["First venue"],
                   description: "First description",
-                  categories: "First category",
+                  categories: ["First category"],
                   schedule: Schedule.new(start_time: Time.now, end_time: Time.now + 2.hours)
       )
     
     40.times do |n|
       act   = acts.sample
-      venue = venues.sample
+      venue = [venues.sample]
       categories = categories.sample 2
       start_time = times.sample
       end_time   = times[times.index(start_time) + 2] ; end_time ||= "12:00 PM"
 
-      description = "This week at #{venue}, come see #{act} in a
+      description = "This week at #{venue.join(', ')}, come see #{act} in a
       once-in-a-lifetime whirlwind performance. Doors at #{start_time}."
 
       schedule = Schedule.new(start_time: start_time, end_time: end_time)
