@@ -17,6 +17,7 @@
 /.c9revisions
 .sass-cache/
 .DS_Store
+/design
 
 .generators
 .rakeTasks
