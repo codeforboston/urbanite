@@ -6,4 +6,5 @@ describe Geolocation do
 
   it { should validate_presence_of :lng }
   it { should validate_presence_of :lat }
+  
 end

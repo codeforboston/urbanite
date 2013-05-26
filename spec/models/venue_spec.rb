@@ -14,4 +14,5 @@ describe Venue do
   it { should validate_presence_of :categories }
   it { should validate_presence_of :organizations }
   it { should validate_presence_of :status }
+  
 end

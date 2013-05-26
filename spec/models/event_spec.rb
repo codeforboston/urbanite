@@ -22,8 +22,6 @@ describe Event do
 
   it { should have_field(:created_at, :updated_at).of_type(Time) }
 
-
   it { should_not validate_associated :venues } 
-
 
 end

@@ -1,7 +1,6 @@
 Urbanite::Application.routes.draw do
   resources :events
 
-
   get "home/index"
 
   # The priority is based upon order of creation:

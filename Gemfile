@@ -1,12 +1,14 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.12'
+gem 'rails',   '3.2.12'
 gem 'foreman', '0.63.0'
 gem 'bootstrap-rails', '0.0.7'
 
 group :development, :test do
-  gem 'rspec-rails', '2.13.2'
+  gem 'rspec-rails',   '2.13.2'
   gem 'mongoid-rspec', '1.8.1'
+  gem 'capybara',      '2.1.0'
+  gem 'selenium-webdriver', '2.0.0'
 end
 
 source 'http://gemcutter.org'
