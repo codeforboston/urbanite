@@ -14,7 +14,7 @@ namespace :db do
   task populate: :environment do
 
     Event.create!(name: "First event",
-                  location: "First venue",
+                  locations: "First venue",
                   description: "First description",
                   categories: "First category",
                   schedule: Schedule.new(start_time: Time.now, end_time: Time.now + 2.hours)
@@ -33,7 +33,7 @@ namespace :db do
       schedule = Schedule.new(start_time: start_time, end_time: end_time)
 
       Event.create!(name: act,
-                    location: venue,
+                    locations: venue,
                     description: description,
                     categories:  categories,
                     schedule:    schedule)
