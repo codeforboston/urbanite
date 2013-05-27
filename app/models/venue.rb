@@ -8,6 +8,7 @@ class Venue
   field :organizations, type: Array
   field :status,        type: String  # TODO: what does status indicate?
   
+  belongs_to :event
   embeds_one :address
   recursively_embeds_one  # can embed a child venue
     # accessed via `venue.child_venue` or `venue.parent_venue`

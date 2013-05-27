@@ -2,6 +2,8 @@ require 'spec_helper'
 
 describe Event do
 
+  # Construction
+
   it { should have_field :_id }  
   it { should have_fields(:name, :description).of_type(String) }
   it { should have_field(:categories).of_type(Array) }
@@ -22,6 +24,15 @@ describe Event do
 
   it { should have_field(:created_at, :updated_at).of_type(Time) }
 
-  it { should_not validate_associated :venues } 
+  # Validations
+
+  it { should validate_presence_of :name }
+  it { should validate_presence_of :description }
+  it { should validate_presence_of :categories }
+  it { should validate_presence_of :schedule }
+  it { should validate_presence_of :status }
+  it { should validate_presence_of :public }
+
+  it { should_not validate_associated :venues }
 
 end

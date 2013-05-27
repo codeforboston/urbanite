@@ -9,16 +9,17 @@ describe "Static pages" do
 
     it "should have the content 'Urbanite'" do
       expect(page).to have_content('Urbanite')
-      Event.create!(name: "Free Chicken", description: "Oh look, a stupid magic show.")
-      Event.create!(name: "Grand Opening of Banana Stand 2",
-                    description: "A banana stand that *won't* kidnap and kill you!")
+      ven1, ven2 = FactoryGirl.create :venue
+      evt1 = FactoryGirl.create(:event, name: "Bob Bear")
+      evt2 = FactoryGirl.create(:event, name: "STRFKR")
+      evt1.venues = [ven1, ven2]
+      evt2.venues = [ven1]
     end
 
     it "should list each event" do
       Event.all.each do |event|
-        expect(page).to have_content event.name
-        expect(page).to have_content event.description
-        expect(page).to have_content event.venues.join(', ')
+        expect(page).to have_selector( 'div', text: event.name )
+        expect(page).to have_selector( 'div', text: event.description )
       end
     end
   end

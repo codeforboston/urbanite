@@ -11,7 +11,6 @@ class Address
   field :territory_code, type: String
   field :country,        type: String
   field :postal_code,    type: String
-
   field :section_name,   type: String
   field :floor,          type: Integer
   field :room,           type: String
