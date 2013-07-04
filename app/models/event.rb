@@ -30,13 +30,13 @@ end
 
 class Schedule
   include Mongoid::Document
-  field :date,       type: String
+  field :start_date,       type: String
   field :start_time, type: String
   field :end_time,   type: String
 
   embedded_in :event
 
-  validates :date, presence: true
+  validates :start_date, presence: true
   validates :start_time, presence: true
 end
 
