@@ -10,7 +10,7 @@
  * Here we get the token from the meta tags (make sure <%= csrf_meta_tags %>
  * is present in your layout.)
  */
-angular.module('urbanite', ['ui.bootstrap']).
+angular.module('urbanite', ['ui.bootstrap', 'google-maps']).
   // configure our http requests to include the Rails CSRF token
   config(["$httpProvider", function (p) {
     var m = document.getElementsByTagName('meta'),

@@ -13,6 +13,7 @@
 //= require angular/angular
 //= require angular/angular-resource
 //= require ./ui-bootstrap-tpls-0.4.0
+//= require ./googlemaps/angular-google-maps
 //= require ./angular_app
 //= require_tree ./angular
 

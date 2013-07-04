@@ -21,8 +21,9 @@
             </div>
           </div>
           <div class="span8">
-            <div id="map">
-              <img src="http://cdn2.planetminecraft.com/files/resource_media/screenshot/1226/Middle-Earth_2717524.jpg">
+            <div id="map" ng-controller="googleMapsCtrl">
+              <google-map center="center" draggable="true" zoom="zoom" latitude="latitude"
+                          longitude="longitude" class="angular-google-map"></google-map>
             </div>
           </div>
         </div>
