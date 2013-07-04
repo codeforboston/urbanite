@@ -20,6 +20,8 @@
     <%= f.text_field :categories %><br />
     <%= f.label :Schedule %><br />
     <%= f.fields_for :schedule  do |builder| %>
+      <%= builder.label :Start_date %><br />
+      <%= builder.text_field :start_date %><br />
       <%= builder.label :Start_time %><br />
       <%= builder.text_field :start_time %><br />
       <%= builder.label :End_time %><br />

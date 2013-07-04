@@ -45,7 +45,7 @@ namespace :db do
 
       description = "This week at #{the_venues.collect{|v| v.name}.join(', ')}, come see #{act} in a once-in-a-lifetime whirlwind performance. Doors at #{start_time}."
 
-      schedule = Schedule.new(date: date, start_time: start_time, end_time: end_time)
+      schedule = Schedule.new(start_date: date, start_time: start_time, end_time: end_time)
 
       e = Event.create!(name: act,
                         description: description,

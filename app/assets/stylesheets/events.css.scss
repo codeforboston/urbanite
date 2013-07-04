@@ -5,3 +5,14 @@
 .event-list-container{
   border: 1px wheat dashed;
 }
+
+.angular-google-map {
+  height: 400px;
+  border: 1px #ccc solid;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.angular-google-map img {
+  max-width: inherit !important;
+}
