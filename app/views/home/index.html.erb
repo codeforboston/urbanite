@@ -1,58 +1,53 @@
-<div class="home">
-  <h1><%= @title %></h1>
-  <p><%= @intro_mssg %></p>
+<div ng-controller="TabsCtrl">
+  <tabset>
 
-  <div ng-controller="TabsCtrl">
-    <tabset>
-
-      <tab heading="Nearby Events">
-        <div class="row">
-          <div class="span4">
-            <div ng-controller="AccordionCtrl">
-              <label class="checkbox">
-                <input type="checkbox" ng-model="oneAtATime">
-                Open only one at a time
-              </label>
-              <accordion close-others="oneAtATime">
-                <accordion-group heading="{{group.title}}" ng-repeat="group in groups">
-                  {{group.content}}
-                </accordion-group>
-              </accordion>
-            </div>
+    <tab heading="Nearby Events">
+      <div class="row">
+        <div class="span4">
+          <div ng-controller="AccordionCtrl">
+            <label class="checkbox">
+              <input type="checkbox" ng-model="oneAtATime">
+              Open only one at a time
+            </label>
+            <accordion close-others="oneAtATime">
+              <accordion-group heading="{{group.title}}" ng-repeat="group in groups">
+                {{group.content}}
+              </accordion-group>
+            </accordion>
           </div>
-          <div class="span8">
-            <div id="map" ng-controller="GoogleMapsCtrl">
-              <google-map center="center" draggable="true" zoom="zoom" latitude="latitude"
-                          longitude="longitude" class="angular-google-map"></google-map>
+        </div>
+        <div class="span8">
+          <div id="map" ng-controller="GoogleMapsCtrl">
+            <google-map center="center" draggable="true" zoom="zoom" latitude="latitude"
+                        longitude="longitude" class="angular-google-map"></google-map>
+          </div>
+        </div>
+      </div>
+    </tab>
+
+    <tab heading="Search">
+      <div ng-controller="CollapseCtrl">
+        <button class="btn" ng-click="isCollapsed = !isCollapsed">[-]</button>
+        <div collapse="isCollapsed">
+          <div ng-controller="EventsCtrl">
+            <div class="event-list-container" >
+              <ul>
+                <li ng-repeat="event in events">
+                  <h3>{{event.name}}</h3>
+                  <p>{{event.description}}</p>
+                  <div ng-controller="RatingCtrl">
+                    <p>
+                      <rating value="rate" max="10"></rating>
+                      <span>Rate: <b>{{rate}}</b></span>
+                    </p>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-      </tab>
+      </div>
+    </tab>
 
-      <tab heading="Search">
-        <div ng-controller="CollapseCtrl">
-          <button class="btn" ng-click="isCollapsed = !isCollapsed">[-]</button>
-          <div collapse="isCollapsed">
-            <div ng-controller="EventsCtrl">
-              <div class="event-list-container" >
-                <ul>
-                  <li ng-repeat="event in events">
-                    <h3>{{event.name}}</h3>
-                    <p>{{event.description}}</p>
-                    <div ng-controller="RatingCtrl">
-                      <p>
-                        <rating value="rate" max="10"></rating>
-                        <span>Rate: <b>{{rate}}</b></span>
-                      </p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </tab>
-
-    </tabset>
-  </div>
+  </tabset>
 </div>
