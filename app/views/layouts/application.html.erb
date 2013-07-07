@@ -22,23 +22,24 @@
         <a class="brand" href="#">Urbanite</a>
         <div class="nav-collapse" style="height: 0px;" collapse="isCollapsed">
           <ul class="nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
+            <li ng-class="navClass('home')"><a href="#home">Home</a></li>
+            <li ng-class="navClass('about')"><a href="#about">About</a></li>
             <form class="navbar-search pull-left">
               <input type="text" class="search-query" placeholder="Search">
             </form>
           </ul>
           <ul class="nav pull-right">
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account <b
-              class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                My Account <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Advanced Search</a></li>
-                <li><a href="#">My Events</a></li>
+                <li ng-class="navClass('advancedSearch')"><a href="#advancedSearch">
+                  Advanced Search</a></li>
+                <li ng-class="navClass('myEvents')"><a href="#myEvents">My Events</a></li>
                 <li class="divider"></li>
                 <li class="nav-header">Account</li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Settings</a></li>
+                <li ng-class="navClass('profile')"><a href="#profile">Profile</a></li>
+                <li ng-class="navClass('settings')"><a href="#settings">Settings</a></li>
               </ul>
             </li>
           </ul>
@@ -52,7 +53,11 @@
     </div>
   </div>
   <div class="container-fluid">
-    <%= yield %>
+    <div class="home">
+      <h1><%= @title %></h1>
+      <p><%= @intro_mssg %></p>
+        <%= yield %>
+    </div>
   </div>
 </body>
 </html>
