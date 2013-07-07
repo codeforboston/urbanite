@@ -1,6 +1,6 @@
 'use strict';
 
-var googleMapsCtrl = function ($scope) {
+var GoogleMapsCtrl = function ($scope) {
   angular.extend($scope, {
     center: {
       latitude: 42.367125,
@@ -12,4 +12,4 @@ var googleMapsCtrl = function ($scope) {
 };
 
 // Avoid minification of the injected dependencies by the assets pipeline
-googleMapsCtrl.$inject = ['$scope'];
+GoogleMapsCtrl.$inject = ['$scope'];
