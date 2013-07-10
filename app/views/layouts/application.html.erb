@@ -54,9 +54,8 @@
   </div>
   <div class="container-fluid">
     <div class="home">
-      <h1><%= @title %></h1>
-      <p><%= @intro_mssg %></p>
-        <%= yield %>
+      <div id='ng-view' ng-view></div>
+      <%= yield %>
     </div>
   </div>
 </body>
