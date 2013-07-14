@@ -10,8 +10,10 @@
               Open only one at a time
             </label>
             <accordion close-others="oneAtATime">
-              <accordion-group heading="{{group.title}}" ng-repeat="group in groups">
-                {{group.content}}
+              <accordion-group heading="{{event.name}}" ng-repeat="event in events">
+                {{event.description}}
+                <span class="btn btn-mini btn-info"><a href="/#/events/{{event._id}}">View
+                  Event</a></span>
               </accordion-group>
             </accordion>
           </div>
@@ -34,7 +36,10 @@
               <ul>
                 <li ng-repeat="event in events">
                   <h3>{{event.name}}</h3>
-                  <p>{{event.description}}</p>
+                  <p>
+                    {{event.description}}
+                    <span class="btn btn-mini btn-info"><a href="/#/events/{{event._id}}">View Event</a></span>
+                  </p>
                   <div ng-controller="RatingCtrl">
                     <p>
                       <rating value="rate" max="10"></rating>

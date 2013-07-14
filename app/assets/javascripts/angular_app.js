@@ -4,7 +4,7 @@
 
 'use strict';
 
-angular.module('urbanite', ['ui.bootstrap', 'google-maps']).
+angular.module('urbanite', ['ui.bootstrap', 'google-maps', 'eventsServices']).
   config(["$httpProvider", "$routeProvider", function ($httpProvider, $routeProvider) {
     //Angular needs to send the Rails CSRF token with each post request.
     var meta = document.getElementsByTagName('meta'),
@@ -20,6 +20,10 @@ angular.module('urbanite', ['ui.bootstrap', 'google-maps']).
     $routeProvider.when('/about', {
       templateUrl: '/assets/templates/about/about.html',
       controller: 'AboutController'
+    }).
+    when('/events/:eventId', {
+      templateUrl: '/assets/templates/event/event.html',
+      controller: 'EventByIdCtrl'
     }).
     otherwise({ redirectTo: '/' });
 
