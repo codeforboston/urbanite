@@ -12,7 +12,7 @@
  */
 angular.module('urbanite', ['ui.bootstrap', 'google-maps']).
   // configure our http requests to include the Rails CSRF token
-  config(["$httpProvider", function (p) {
+  config(["$httpProvider", "$routeProvider", function (p, $routeProvider) {
     var m = document.getElementsByTagName('meta'),
       i;
     for (i in m) {
@@ -21,4 +21,11 @@ angular.module('urbanite', ['ui.bootstrap', 'google-maps']).
         break;
       }
     }
+
+    $routeProvider.when('/about', {
+      templateUrl: '/assets/templates/about/about.html',
+      controller: 'AboutController'
+    }).
+    otherwise({ redirectTo: '/' });
+
   }]);
