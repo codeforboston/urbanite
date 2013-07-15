@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 
-gem 'rails',   '3.2.12'
+# Adding ruby 2 as a dependency for heroku
+ruby "2.0.0"
+
+gem 'rails', '3.2.12'
 gem 'foreman', '0.63.0'
 gem 'bootstrap-rails', '0.0.7'
 
